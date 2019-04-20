@@ -1,0 +1,95 @@
+.jumbotron {
+    background-image: url("../../assets/image/destination.jpg");
+    background-size: 110%;
+    background-position: center;
+    background-size: cover;
+    /* position: relative; */
+  }
+
+.tab-content ul li{
+    padding-top:5px;
+    font-size:20px;
+    -webkit-transition: .5s all ease;
+    -moz-transition: .5s all ease;
+    transition: .5s all ease;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tab-content ul li:hover{
+    padding: 3px 0;
+    margin-left:5px;
+    font-weight:700;
+      
+}
+
+.tab-content ul li a:hover{
+    text-decoration: none;
+}
+
+.tab-content ul li a{
+    /*color: rgb(73, 160, 181)*/
+    color: rgb(136, 135, 135)
+}
+
+.card-footer span{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.8em;
+}
+
+.card-footer span:first-child{
+    border-right: 1px solid gray;
+}
+
+.card-footer span:nth-child(2){
+    border-right: 1px solid gray;
+}
+
+.card-body a{
+    padding-right: 20px;
+}
+
+.card-body a:first-of-type{
+    border-right: 1px solid gray
+}
+
+.card-body a:nth-of-type(2){
+    padding-left: 20px;
+}
+
+.nav-item .nav-link{
+    color: rgb(77, 160, 179) 
+}
+
+.nav-item .active{
+    color:white;
+    background-color: rgb(77, 160, 179);
+}
+
+.nav-item{
+    padding: 0px;
+}
+
+.form-control {
+    box-shadow: 0 10px 30px 0 #B0C1D9;
+  }
+
+#placeList{
+    visibility: hidden;
+    height:200px;
+    background-color: white;
+    overflow: scroll;
+    z-index: 10;
+    opacity: 0.85;
+}
+
+#placeList a{
+    text-decoration: none;
+    color: rgb(75, 75, 75)
+}
+#placeList a:hover{
+    color: rgb(34, 34, 34);
+    font-size: 1.2em;
+}
+

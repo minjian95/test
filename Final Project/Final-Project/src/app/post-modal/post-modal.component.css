@@ -1,0 +1,66 @@
+#drop_zone {
+    width: 80%;
+    height: auto;
+    min-height:200px;
+    max-height:500px;
+    border: 1px  #000;
+    border-style: dashed;
+    background-color:rgb(238,238,238);
+  }
+  #img_input {
+    display: none;
+  }
+  #img_label {
+    color:white;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px;
+    background-color:rgb(75,160,181);
+  }
+  #img_label:hover{
+    background-color: rgb(42, 102, 114)
+  }
+  #preview_box img {
+    max-height:500px;
+    width:auto;
+  }
+  #retry{
+    width: 80%;
+    background-color:rgb(238,238,238);
+    border:1px solid rgb(75,160,181);
+    margin-bottom:5px;
+    font-size:18px;
+    display:none;
+      
+  }
+  #retry a{
+    color:rgb(60,160,181);
+
+  }
+  #retry a:hover{
+      text-decoration: none;
+      color:rgb(42, 102, 114);
+  }
+
+  .placeList{
+    /* visibility: hidden; */
+    position: absolute;
+    display:none;
+    height:150px;
+    width:96%;
+    background-color: rgb(240,240,240);
+    overflow: scroll;
+    z-index: 10;
+    opacity: 0.9;
+}
+
+.placeList a{
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+  text-shadow: none;
+}
+.placeList a:hover{
+  color: rgb(34, 34, 34);
+  font-size: 1.2em;
+  text-shadow: none;
+}

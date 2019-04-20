@@ -1,0 +1,467 @@
+<app-header></app-header>
+
+<div class="jumbotron " style="margin-bottom: 0px; ">
+  <div class="container text-center">
+    <h1 style="color:white; text-shadow: 1px 1px 1px black;">Get ready! and go for it!</h1>
+    <p style="color:white; text-shadow: 1px 1px 1px black;">We provide all the popular places, you will always find what you want!</p>
+    <div class="container">
+      <div class="input-group">
+          <input class="form-control" type="text" id="search" name="search" (keydown)="showPlaceList()" 
+          [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Find a place you want">
+          <div class="input-group-append">
+          <button type="button" class="btn btn-info" (click)="search()">GO!</button>
+          </div>
+      </div>
+        <div id="placeList" (mouseleave)="hidePlaceList()">
+          <div *ngFor="let place of places | filter:searchText">
+            <a [href]="place.name"><p>{{place.name}}</p></a>
+          </div>
+        </div>
+    </div>
+    <!--<div class="col-8 " style="margin-left: auto; margin-right: auto;">
+      <input type="text" class="form-control" placeholder="Where you want to go" [(ngModel)]="term">
+        <div *ngFor = "let item of items |filter:term">
+          <p>
+            {{item}}
+          </p>
+        </div><a href="#" class="btn btn-info"><i class="fa fa-search" aria-hidden="true"></i> GO!</a>
+    </div>-->
+  </div>
+</div>
+
+    <div class="container" style="margin-top: 40px;">
+      <h2 class="text-center" style="margin-bottom: 20px">All the Destination</h2>
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li class="nav-item "><a class="nav-link active" data-toggle="pill" href="#asia">Asia</a></li>
+        <li class="nav-item "><a class="nav-link" data-toggle="pill" href="#europe">Europe</a></li>
+        <li class="nav-item "><a class="nav-link" data-toggle="pill" href="#america">America</a></li>
+        <li class="nav-item "><a class="nav-link" data-toggle="pill" href="#oceania">Oceania</a></li>
+        <li class="nav-item "><a class="nav-link" data-toggle="pill" href="#africa">Africa</a></li>
+        <li class="nav-item "><a class="nav-link" data-toggle="pill" href="#middleeast">MiddleEast</a></li>
+      </ul> 
+      <br>
+      <div class="tab-content">
+        <div id="asia" class="container tab-pane active text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Afghanistan</a></li>
+              <li><a href="#">Pakistan</a></li>
+              <li><a href="#">Philippines</a></li>
+              <li><a href="#">Korea</a></li>
+              <li><a href="#">Maldives</a></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Malaysia</a></li>
+              <li><a href="#">Myanmar</a></li>
+              <li><a href="#">Nepal</a></li>
+              <li><a href="#">Japan</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Sri Lanka</a></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">China</a></li>
+              <li><a href="#">India</a></li>
+              <li><a href="#">Thailand</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Singapore</a></li>
+              <li><a href="#">Vietnam</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div id="europe" class="container tab-pane fade text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Ireland</a></li>
+              <li><a href="#">Austria</a></li>
+              <li><a href="#">Iceland</a></li>
+              <li><a href="#">Germany</a></li>
+              <li><a href="#">Russia</a></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">France</a></li>
+              <li><a href="#">Finland</a></li>
+              <li><a href="#">Netherlands</a></li>
+              <li><a href="#">Norway</a></li>
+              <li><a href="#">Italy</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Ukraine</a></li>
+              <li><a href="#">Turkey</a></li>
+              <li><a href="#">Switzerland</a></li>
+              <li><a href="#">Denmark</a></li>
+              <li><a href="#">Portugal</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div id="america" class="container tab-pane fade text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Argentina</a></li>
+              <li><a href="des-rio">Brazil</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Canada</a></li>
+              <li><a href="#">United States</a></li>
+              <li><a href="#">Mexico</a></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Honduras</a></li>
+              <li><a href="#">Caribbean Sea</a></li>
+              <li><a href="#">Guatemala</a></li>
+              <li><a href="#">Chile</a></li>
+              <li><a href="#">Uruguay</a></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Colombia</a></li>
+              <li><a href="#">Paraguay</a></li>
+              <li><a href="#">Panama</a></li>
+              <li><a href="#">Peru</a></li>
+              <li><a href="#">Guatemala</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div id="oceania" class="container tab-pane fade text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Australia</a></li>
+              <li><a href="#">Daegu Reef</a></li>
+              <li><a href="#">Tahiti</a></li>
+              <li><a href="#">Fiji</a></li>
+              <li><a href="#">Gold Coast</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Nauru</a></li>
+              <li><a href="#">Niue</a></li>
+              <li><a href="#">Palau</a></li>
+              <li><a href="#">Saipan</a></li>
+              <li><a href="#">Samoa</a></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Ukraine</a></li>
+              <li><a href="#">Vanuatu</a></li>
+              <li><a href="#">Wake Island</a></li>
+              <li><a href="#">new Zealand</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Tonga</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div id="africa" class="container tab-pane fade text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Algeria</a></li>
+              <li><a href="#">Congo</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Cape Verde</a></li>
+              <li><a href="#">Ethiopia</a></li>
+              <li><a href="#">Egyp</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Ghana</a></li>
+              <li><a href="#">Guinea</a></li>
+              <li><a href="#">Cameroon</a></li>
+              <li><a href="#">Comoros</a></li>
+              <li><a href="#">Kenya</a></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Mauritius</a></li>
+              <li><a href="#">Madagascar</a></li>
+              <li><a href="#">Libya</a></li>
+              <li><a href="#">Rwanda</a></li>
+              <li><a href="#">Zimbabwe</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+        <div id="middleeast" class="container tab-pane fade text-center">
+          <div class="row">
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Abu Dhabi</a></li>
+              <li><a href="#">Dubai</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">ran</a></li>
+              <li><a href="#">Iraq</a></li>
+              <li><a href="#">Kuwait</a></li>
+             </ul>
+            </div>
+           <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Lebanon </a></li>
+              <li><a href="#">Sharjah</a></li>
+              <li><a href="#">Saudi Arabia</a></li>
+              <li><a href="#">Syria</a></li>
+              <li><a href="#">Jerusalem</a></li>
+             </ul>
+          </div>
+          <div class="col-sm-4">
+             <ul>
+              <li><a href="#">Tehran</a></li>
+              <li><a href="#">Yemen</a><sup><span class="badge badge-pill badge-danger">HOT</span></sup></li>
+              <li><a href="#">Israel</a></li>
+              <li><a href="#">Jordan</a></li>
+              <li><a href="#">Riyadh</a></li>
+             </ul>
+           </div>
+          </div>
+        </div>
+      </div><br><br>
+
+    </div>
+
+   <!-- Place order by user reply -->
+   <div id="topRecommend"  >
+    <h2 style="margin-top: 20px; margin-bottom: 40px; text-align:center;">The Toppest Places our customers like</h2>
+    <div class="row" >
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+            <div class="card">
+              <a  class="thumb" href="#">
+                <img class="card-image-top" src="../../assets/image/1.jpg" alt="" style="width:100%;">
+                <img class="card-image-top" id="top-label" src="../../assets/image/Top1.png"  style="width:25%">
+                <div class="reviews">
+                  <div class="reviewBox">
+                    <div class="reviewCaption">
+                      <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                      <span> 1,053,987 Pieces of Reply</span>
+                  </div>
+                    <span class="reviewFigure">
+                      <span>This is a really great place</span>
+                    </span>
+                  </div>
+                </div>
+                </a>
+                <div class="card-body">
+                    <h5><a class="card-title">Thailand</a><a class="card-title">Phuket</a></h5>
+                    <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                    <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+                </div>
+                <div class="card-footer">
+                  <span><a>Hotel</a> 367</span>
+                  <span><a>Resort</a> 1578</span>
+                  <span><a>Dinnig</a> 832</span>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+            <div class="card">
+              <a  class="thumb" href="#">
+                <img class="card-image-top" src="../../assets/image/2.jpg" alt="" style="width:100%">
+                <img class="card-image-top" id="top-label" src="../../assets/image/Top2.png"  style="width:25%">
+                <div class="reviews">
+                    <div class="reviewBox">
+                        <div class="reviewCaption">
+                          <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                          <span> 1,000,489 Pieces of Reply</span>
+                      </div>
+                        <span class="reviewFigure">
+                          <span>This is a really great place</span>
+                        </span>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="card-body">
+                      <h5><a class="card-title">United Arab Emirates</a><a class="card-title">Dubai</a></h5>
+                      <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                      <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+                  </div>
+                  <div class="card-footer">
+                    <span><a>Hotel</a> 367</span>
+                    <span><a>Resort</a> 1578</span>
+                    <span><a>Dinnig</a> 832</span>
+                  </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+            <div class="card">
+              <a  class="thumb" href="#">
+                <img class="card-image-top" src="../../assets/image/3.jpeg" alt="" style="width: 100%">
+                <img class="card-image-top" id="top-label" src="../../assets/image/Top3.png"  style="width:25%">
+                <div class="reviews">
+                    <div class="reviewBox">
+                        <div class="reviewCaption">
+                          <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                          <span> 973,284 Pieces of Reply</span>
+                      </div>
+                        <span class="reviewFigure">
+                          <span>This is a really great place</span>
+                        </span>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="card-body">
+                      <h5><a class="card-title">Japan</a><a class="card-title">Osaka</a></h5>
+                      <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                      <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+                  </div>
+                  <div class="card-footer">
+                    <span><a>Hotel</a> 367</span>
+                    <span><a>Resort</a> 1578</span>
+                    <span><a>Dinnig</a> 832</span>
+                  </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+            <div class="card">
+              <a  class="thumb" href="#">
+                <img class="card-image-top" src="../../assets/image/4.jpg" alt="" style="width: 100%">
+                <img class="card-image-top" id="top-label" src="../../assets/image/Top4.png"  style="width:25%">
+                <div class="reviews">
+                    <div class="reviewBox">
+                        <div class="reviewCaption">
+                          <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                          <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                          <span> 945,738 Pieces of Reply</span>
+                      </div>
+                        <span class="reviewFigure">
+                          <span>This is a really great place</span>
+                        </span>
+                    </div>
+                  </div>
+                  </a>
+                  <div class="card-body">
+                      <h5><a class="card-title">Russia</a><a class="card-title">Mexico</a></h5>
+                      <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                      <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+                  </div>
+                  <div class="card-footer">
+                    <span><a>Hotel</a> 367</span>
+                    <span><a>Resort</a> 1578</span>
+                    <span><a>Dinnig</a> 832</span>
+                  </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+          <div class="card">
+            <a  class="thumb" href="#">
+              <img class="card-image-top" src="../../assets/image/5.jpg" alt="" style="width: 100%">
+              <img class="card-image-top" id="top-label" src="../../assets/image/Top5.png"  style="width:25%">
+              <div class="reviews">
+                  <div class="reviewBox">
+                      <div class="reviewCaption">
+                        <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                        <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                        <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                        <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                        <span> 892,230 Pieces of Reply</span>
+                    </div>
+                      <span class="reviewFigure">
+                        <span>This is a really great place</span>
+                      </span>
+                  </div>
+                </div>
+                </a>
+                <div class="card-body">
+                    <h5><a class="card-title">France</a><a class="card-title">Paris</a></h5>
+                    <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                    <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+                </div>
+                <div class="card-footer">
+                  <span><a>Hotel</a> 367</span>
+                  <span><a>Resort</a> 1578</span>
+                  <span><a>Dinnig</a> 832</span>
+                </div>
+          </div>
+      </div>
+      <div class="col-xl-4 col-lg-6 col-sm-12">
+        <div class="card">
+          <a  class="thumb" href="#">
+            <img class="card-image-top" src="../../assets/image/6.jpg" alt="" style="width: 100%">
+            <img class="card-image-top" id="top-label" src="../../assets/image/Top6.png"  style="width:25%">
+            <div class="reviews">
+                <div class="reviewBox">
+                    <div class="reviewCaption">
+                      <img src="../../assets/image/IconImage/images.png" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images1.jpg" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images2.jpg" class="rounded-circle" width="20">
+                      <img src="../../assets/image/IconImage/images3.jpg" class="rounded-circle" width="20">
+                      <span> 832,134 Pieces of Reply</span>
+                  </div>
+                    <span class="reviewFigure">
+                      <span>This is a really great place</span>
+                    </span>
+                </div>
+              </div>
+              </a>
+              <div class="card-body">
+                  <h5><a class="card-title">Italy</a><a class="card-title">Florence</a></h5>
+                  <span style="padding-right:20px;"><a href="#" class="btn btn-info"><i class="fa fa-book" aria-hidden="true"></i> notes</a></span>
+                  <span><a href="#" class="btn btn-info"><i class="fa fa-bandcamp" aria-hidden="true"></i> guides</a></span>
+              </div>
+              <div class="card-footer">
+                <span><a>Hotel</a> 367</span>
+                <span><a>Resort</a> 1578</span>
+                <span><a>Dinnig</a> 832</span>
+              </div>
+        </div>
+    </div>
+    </div>
+</div>
+<br><br>
+
+<!-- places recommened by sytem -->
+<div id="ourRecommend">
+<h2 style="padding-top: 20px; padding-bottom: 40px; ">The place we strongly recommended</h2><br>
+<div class="row">
+<div class="col-sm-4 col-4">
+  <img src="../../assets/image/Rio.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+  <p>Rio de Janeiro</p>
+</div>
+<div class="col-sm-4 col-4">
+  <img src="../../assets/image/hongkong.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+  <p>Hong Kong</p>
+</div>
+<div class="col-sm-4 col-4">
+  <img src="../../assets/image/egypt.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+  <p>Egypt</p>
+</div>
+</div><br><br>
+<div class="row" id="recommend2">
+  <div class="col-4">
+      <img src="../../assets/image/Flo.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+      <p>Florence</p>
+  </div>
+  <div class="col-4">
+      <img src="s/../../assets/image/eiffeltower.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+      <p>Paris</p>
+  </div>
+  <div class="col-4">
+      <img src="../../assets/image/dubai.jpg" class="rounded-circle" style="width:90%; height:90%" alt="">
+      <p>Dubai</p>
+  </div>
+</div>
+<br></div><br>
+

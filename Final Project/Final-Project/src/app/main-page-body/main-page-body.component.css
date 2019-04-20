@@ -1,0 +1,184 @@
+#search-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    /* z-index: -1; */
+  }
+  @media only screen and (max-width: 600px) {
+    #search-bar h1 {
+      font-size: 30px;
+    }
+    #search-bar {
+      width: 80%;
+    }
+  }
+
+  #placeList{
+    visibility: hidden;
+    height:150px;
+    background-color: white;
+    overflow: scroll;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+#placeList a{
+  text-decoration: none;
+  color: rgb(75, 75, 75);
+  text-shadow: none;
+}
+#placeList a:hover{
+  color: rgb(34, 34, 34);
+  font-size: 1.2em;
+  text-shadow: none;
+}
+
+.nav-item .nav-link{
+  color: rgb(77, 160, 179) 
+}
+
+.nav-item .active{
+  color:white;
+  background-color: rgb(77, 160, 179);
+}
+
+.fa-link{
+  display:none;
+}
+
+/* .nav{
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+} */
+
+.row{
+  margin: 20px;
+}
+
+#prevExperts{
+  
+}
+
+#p1::first-letter{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: cursive;
+  padding-right: 2px;
+  color:  rgb(77, 160, 179)
+}
+#p2::first-letter{
+  font-size: 3em;
+  font-weight: bold;
+  font-family: cursive;
+  padding-right: 2px;
+  color:  rgb(77, 160, 179)
+}
+
+#rightPanel p{
+  font-size: 1.2em;
+}
+
+#imageWapper{
+  position: absolute;
+  height: 1000px;
+} 
+
+#imageMedia{
+  height: 900px;
+  /* background-image: url("../../assets/image/imageMedia.jpg");
+  background-repeat: no-repeat; */
+  position: fixed;
+  top: 70px;
+  right: auto;
+  width: 100%;
+  z-index: -1;
+}
+
+#imageText{
+  text-align:center; 
+  color:white;
+  padding-top: 150px;
+}
+
+#imageText div{
+  padding:10px;
+}
+
+.leftImg{
+  position: relative;
+  margin-bottom: 20px;
+
+}
+
+.leftImgCap{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:40%;
+  left:0;
+}
+
+.leftImgCap p{
+  background-color: white;
+  font-size: 1.2em;
+  border-left: 6px solid  rgb(77, 160, 179);
+  padding: 3px;
+}
+
+.leftImgCap p:hover{
+  color: rgb(77, 160, 179);
+}
+
+.leftImg {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-image {
+  transition: transform .5s;
+}
+
+.top-image:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
+  color:  rgb(77, 160, 179)
+}
+
+#toast1{
+  position: fixed;
+  right: 0;
+  top: 100px;
+}
+#toast2{
+  position: fixed;
+  right: 0;
+  top: 184px;
+}
+#toast3{
+  position: fixed;
+  right: 0;
+  top: 268px;
+}
+
+
+#prevDiv {
+  position: relative;
+  white-space: nowrap;
+  overflow-x: scroll;
+  height: 300px;
+}
+
+#prevDiv img{
+  padding-left: 20px;
+}

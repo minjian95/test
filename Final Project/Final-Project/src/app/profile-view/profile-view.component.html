@@ -1,0 +1,207 @@
+<app-header></app-header>
+
+<div class="bg-light">
+<div id="cover-div" class="jumbotron text-center mb-0 bg-info text-white" >
+    <input id="cover_input" type="file" accept="image/*"/>
+    <label id="cover-label" for="cover_input">
+      <h3>          </h3>
+    </label>
+  
+</div>
+<div class="container" style="height:auto">
+  <div class="media border p-3 mb-3">
+      <div class="row pr-3 pr-md-0 pl-md-3">
+          <div align="center" class="col-md-2 col-3">
+            <figure style="height:100%">
+              <div class="mysquare">
+                  <div class="avatar_box border">
+                    <a href="javascript:void(0);"><img id="preview" class=" " src={{targetAvatar}} alt="preview"/></a>
+                  </div>
+                </div>
+              
+                  <figcaption class="small text-secondary text-center"><strong>Member Since</strong><br />{{targetRegisterDate}}</figcaption>
+              </figure>
+          </div>
+          <div class="col-md-10 col-9 pr-md-3 pr-0">
+              <div class="media-body">
+                  <button type="button" class="btn btn-outline-info float-right" data-toggle="" data-target=""><i class="fa fa-plus" aria-hidden="true"></i> Follow</button>
+                  <h4>{{targetNickName}}</h4>
+                  <p class="text-secondary">@{{targetUserName}}</p>
+                  <p class="text-dark"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;{{targetLocation}}</p>
+                  <hr class="hr-info" />
+                  <i>{{targetDescription}}</i>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="d-flex py-2 text-center border">
+              <div class="px-2 flex-fill">50<br /><span class="text-secondary small">Following</span></div>
+              <div class="px-2 flex-fill border border-info border-top-0 border-bottom-0">50<br /><span class="text-secondary small">Followers</span></div>
+              <div class="px-2 flex-fill">{{targetPostsCount}}<br /><span class="text-secondary small">Posts</span></div>
+          </div>
+
+          <!-- <div class="column col-lg-3 col-md-12 col-12"> -->
+              <!-- follow card -->
+              <div class="card" style="margin-top:18px">
+                <div class="card-head2" style="height:20px">
+        
+                </div>
+                <div class="">
+                  <div class="col-12" style="text-align:center">
+                    <p class="p avatar-tag" style="font-size: 18px">Follow us for tips of trips!</p>
+                  </div>
+                <!-- card-body -->
+                <div class="card-body">
+                  
+        
+                    <div class="column col-12 col-md-6 col-lg-12" *ngFor="let user of allUsers;">
+                        <div class="row" style="margin-bottom:1%">
+                            <div align="center" class=" col-3 col-md-3" style="padding-right:0;">
+                                <div class="mysquare" style="width:100%;padding-top:100%;">
+                                <div class="avatar_box border">
+                                  <a href="javascript:void(0);" (click)="getTargetUser(user._id)"><img src={{user.avatarURL}} alt="preview"/></a>
+                                </div>
+                              </div>
+                                </div>
+                          <div class="avatar2 col-md-9 col-9">
+                            <a href="">
+                              <P class="p userName">{{user.nickName}}<i class="fa fa-star" aria-hidden="true"></i></P>
+                              <p class="p userId">@{{user.userName}}</p>
+                            </a>
+                          </div>
+                        </div>
+                      
+                        <span class="avatar-tag-location-s">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;&nbsp;{{user.location}}
+                        </span>
+        
+                        <p class="p user-info2"><span class=".avatar-tag-num2" style="color:black">{{user.posts.length}}</span>&nbsp;contributions•
+                          <span class=".avatar-tag-num2" style="color:black">2345</span>&nbsp;followers</p>
+                        
+                            <p style="
+                            overflow : hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    white-space: normal;
+                
+                            ">{{user.description}}
+        
+                            </p>
+                            <br>
+                        <button type="button" class="btn btn-info btn-lg btn-block" style="margin-top:10px"><i class="fa fa-plus" style="font-size:12px" aria-hidden="true"></i>&nbsp;Follow&nbsp;&nbsp;</button>
+                        <hr>
+                      
+                    </div>
+        
+                 
+        
+                      <div>
+                        <a href="">
+                        <p class="avatar-tag text-info" style="font-size: 18px">See more</p>
+                      </a>
+                      </div>
+                    
+                  </div>
+                  <!-- card-body end-->
+                </div>
+              </div>
+              <!-- follow card end-->
+            
+          <!-- <div class="card" style="margin-top:15px;margin-bottom:18px">
+            <div class="card-body">
+              <div class="" style="margin-top:0px">
+                <p class="p avatar-tag" style="font-size: 20px">Share your trips and feelings</p>
+              </div>
+              <hr>
+              <div class="">
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#photoModal">
+                  <p class="p text-info" style="font-size:18px"><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Post your photos</p>
+                </a>
+                <a href="javascript:void(0);" data-toggle="modal" data-target="#postModal">
+                  <p class="p text-info" style="font-size:18px"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;Record your trips</p>
+                </a>
+              </div>
+            </div>
+          </div> -->
+          <!-- (optional) div for "Who to follow on TripAdvisor" -->
+      </div>
+
+      <div id="posts-box" class="column col-lg-8 col-md-8 col-12" style="padding-left:15px;padding-right:15px">
+        <div align="center" id="hint" class="card" style="height:200px">
+          <p style="margin-top:80px;color:grey">No records for now...Share us some amazing trip.</p>
+        </div>
+        <div class="card" style="margin-bottom:18px" *ngFor="let post of targetPosts;">
+            <div class="" style="height:20px"></div>
+            <div class="row" style="margin-bottom:5px">
+                    <div align="center" class=" col-3 col-md-2" style="padding-right:0;">
+                    <div class="mysquare" style="width:70%;padding-top:70%;">
+                    <div class="avatar_box border">
+                      <a href="javascript:void(0);" (click)="getTargetUser(post.postUserId)"><img src={{post.postAvatar}} alt="preview"/></a>
+                    </div>
+                  </div>
+                    </div>
+                  <div class="avatar2 col-5 col-md-6" style="padding-left:0">
+                        <a href="" class="userName">{{post.postNickName}}&nbsp;<i class="fa fa-star" aria-hidden="true"></i></a>
+                        <span class="date">posted at </span>
+                        <p class="p date">{{post.postDate}}</p>
+                  </div>
+                  <div align="right" class="avatar2 col-4 col-md-4">
+                      <a href="javascript:void(0);" class="href"><span><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;Follow</span></a>
+                      <a href="javascript:void(0);" class="href" [popover]="popReport" placement="bottom" triggers="click" [outsideClick]="true"><span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></a>
+                </div>
+              </div>
+          <div align="center" class="post-img" style="max-height:500px">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#photoShowModal">
+              <img class="img-fluid" src={{post.photo.value}} style="max-height:500px; " (click)="openPhotoShowModal(post.photo.value)">
+            </a>
+            </div>
+          <div class="card-body">
+            <h4>{{post.title}}</h4>
+            <p style="overflow : hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: normal;">
+            {{post.review}}
+            </p>
+            <a href="/des-rio"><p style="margin-bottom:2px"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;{{post.postLocation}}</p></a>
+          </div>
+          <div class="share-area container-fluid">
+            <div style="margin-top:5px">
+              <span class="likes underline" ><a href="" style="color:grey"><span>123</span> &nbsp;Likes</a></span>
+              <span class="reports underline" ><a href="" style="color:grey"><span>12</span> &nbsp;Reposts</a></span>
+              <hr style="margin-top:5px;margin-bottom:0px">
+            <div style="margin-top:5px;margin-bottom:5px">
+                <a href="" class="href"><span style="margin-left: 10px"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;Likes</span></a>
+                <a href="" class="href"><span style="margin-left: 10px"><i class="fa fa-share" aria-hidden="true"></i>&nbsp;Share</span></a>
+            </div>
+           </div>
+          </div>
+         </div>
+      </div>
+    
+<ng-template #popReport >
+  <div align="center" style="height: 20px">
+    <a href="javascript:void(0);" class="" style=""><p class="text-info">Report this</p></a>
+  </div>
+</ng-template>
+
+
+<div class="modal" id="photoShowModal">
+  <div class="" style="border:0;background:rgba(0,0,0,0)">
+    <div class="modal-content" style="max-height:800px;background:rgba(0,0,0,0);border: 0"> 
+        <div class="modal-header text-white">
+            <h4 class=""><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Photo</h4>
+            <button type="button" id="photoShowModalclose" class="close text-white" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body" style="border: 0">
+              <div align="center" class="post-img" style="margin-top:5%;margin-bottom:5%">
+                  <a href="javascript:void(0);" data-toggle="modal" data-target="#photoShowModal">
+                    <img id="showImg" class="img-fluid" src="" style="max-height:800px; " (click)="openPhotoShowModal()">
+                  </a>
+              </div>
+                      
+        </div>
+    </div>
+  </div>
+</div>

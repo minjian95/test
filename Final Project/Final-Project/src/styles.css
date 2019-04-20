@@ -1,0 +1,293 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js");
+#BestTrip{
+    background-color: rgb(242,242,242);
+  }
+  #topRecommend{ 
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  #ourRecommend{
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    background-color: white;
+  }
+  .navbar{
+      padding: 12px;
+  }
+  .nav-link{
+      font-size: 1.2em;
+  }
+  .navbar-brand{
+      font-size: 1.5em;
+  }
+  #btnLogin{
+      text-align: right;
+      float: right;
+  }
+
+  .carousel-inner img{
+    width: 100%;
+    height: 100%;
+  }
+  #Company{
+      margin-top: 40px;
+      margin-bottom: 30px;
+  }
+  #recommend1{
+      width: 100%;
+      height: 100%;
+  }
+
+  .modal-footer p{
+      text-align: left; 
+  }
+  footer{
+      margin-top: 20px;
+  }
+  #top-label{
+    position: absolute;
+    right:0;
+    top:10px;
+  }
+  .card .thumb:link, .thumb:visited {
+    text-decoration: none;
+    color: white;
+  }
+  .card .reviews .reviewBox {
+  position: relative;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  }
+
+  .card .reviewBox .reviewCaption, #popularDestinations .reviewBox .reviewFigure {
+  width: 100%;
+  }
+
+  .card .reviewBox .reviewCaption {
+  margin-top: 12px;
+  margin-bottom: 30px;
+  }
+
+
+
+  .thumb:hover .reviewBox,  .thumb:focus .reviewBox {
+  -webkit-transform: translateY(-40px);
+  -ms-transform: translateY(-40px);
+  transform: translateY(-50px);
+  }
+  .thumb:hover .reviews, .thumb:focus .reviews {
+  height: 50px;
+  }
+
+  .reviews {
+  padding: 0 15px;
+  height: 50px;
+  overflow: hidden;
+  line-height: 1em;
+  text-align: left;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(25%, rgba(0, 0, 0, 0.4)), color-stop(100%, rgba(0, 0, 0, 0.9)));
+  
+  -webkit-transition: height 200ms linear;
+  transition: height 200ms linear;
+}
+  #test {
+    
+    z-index: 10;
+    position: absolute;
+
+  }
+/* mj */
+The Navgation Bar
+#btnLogin{
+  float: right;
+}
+.contactInfo{
+  margin: 8px;
+}
+
+.page-footer .jumbotron{
+  background-color:rgb(215,215,215);
+}
+
+.footer-copyright{
+  background-color:rgb(160,160,160);
+}
+
+.navbar-custom { 
+  background-color: #0b4b0b; 
+}
+
+
+.avatar2{
+  height:70px
+}
+.avatar2 img{
+  height:66px;
+  width:66px;
+}
+
+.card-head2{
+  background-color:white;
+  height: 80px;
+}
+.card-user{
+  position:relative;
+  top:20px; 
+  left:-25px;
+}
+.avatar img{
+  position: relative;
+  top:-28px; 
+  left:30px;   
+}
+.avatar a{
+  color:black;
+}
+a :hover{
+  text-decoration:none;
+}
+.avatar-tag,.avatar-tag ul li{
+  color:black;
+  font-size: 15px;
+  font-weight:bold;
+  margin-bottom: 5px;
+}
+.avatar-tag-num{
+  color:gray;
+  font-size: 15px;
+  font-weight:bold;
+  margin-bottom: 5px;
+}
+.avatar-tag-num2{
+  color:black;
+}
+.avatar-tag-location{
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.avatar-tag-location-s{
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.userName{
+  color:black;
+  font-size: 14px;
+  font-weight:bold;
+  margin-bottom: 5px;
+  margin-right:10px;
+  
+}
+.userId,.date{
+  color:grey;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+#social-page{ 
+ margin-top:40px;
+}
+.avatar2{
+  height:70px
+}
+.avatar2 img{
+  height:66px;
+  width:66px;
+}
+.user-info2{
+  color:grey;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.text{
+  font-size: 18px;
+}
+.follow-btn button{
+  height:100%;
+  width:100%;
+  font-size:19px;
+  margin-bottom: 0;
+}
+.text {
+  margin-bottom: 10px;
+}
+.href{
+  font-size:15px;
+  color:rgb(75, 160, 181);
+  margin-right: 20px;
+  text-decoration: none;
+}
+.href :hover{
+  color:rgb(47, 101, 114);
+}
+.share-area{
+  background-color:rgb(250,250,250);
+}
+.underline{
+  font-size:15px;
+  color:grey;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+a:hover{
+text-decoration: none;
+}
+.underline :hover{
+  color:grey;
+  text-decoration:underline;
+}
+
+.p{
+  color:black;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+ 
+}
+  .mysquare{
+    position: relative;
+
+    width:100%;
+    padding-top:100%;
+}
+  .avatar_box{ 
+    top:0;
+    position: absolute;
+    height:100%;
+    width:100% ;
+    border-radius: 50%;
+    overflow: hidden;
+    
+  }
+
+  .avatar_box label,.avatar_box img {
+    height:100%;
+    max-height:300px;
+    width:auto;
+    position:relative; 
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    transition:  .5 ease;
+  }
+   .avatar_box label img:hover{
+      opacity:0.3;
+  }
+  /* img:hover{
+    opacity:0.9;
+  } */
+   .avatar_box:hover .middle-text{
+    opacity:1;
+}  
+  .middle-text{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  
+  }

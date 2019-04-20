@@ -1,0 +1,109 @@
+<div class="modal" id="postModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4><i class="fa fa-pencil" aria-hidden="true"></i> Record your trip </h4>
+            <button type="button" id="postclose" class="close" data-dismiss="modal" >&times;</button>
+          </div>
+          <div class="modal-body">
+            <form role="form" id="postForm" (ngSubmit)="onSubmit(submitSuccess)">
+              <div class="form-group">
+                  <div *ngIf="message" [ngClass]="{ 'alert': message, 'alert-danger': message.type === 'error' }">
+                    {{message.text}}</div>
+                  <label for="title">Title of your review</label>
+                  <input type="text" class="form-control" name="title" id="title" placeholder="Enter the title"
+                  [(ngModel)]="model.title" />
+                </div>
+                <div class="form-group">
+                  <label for="review">Add a location tag (required)</label>
+                  <input type="text" class="form-control"  name="postLocation" placeholder="Search a city"
+                  (keydown)="showPlaceList()" autocomplete="off" [(ngModel)]="model.postLocation"/>
+                  <div id="placeList1" class="placeList" (mouseleave)="hidePlaceList()">
+                    <div *ngFor="let city of cities | filter:searchText">
+                      <a href="javascript:void(0);" (click)="finshLocation(city.name)">
+                        <p>&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;{{city.name}}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="review">Your Review(required)</label>
+                  <textarea cols="93" rows="6" class="form-control" name="review" id="review" placeholder="Anything about your trip..."
+                  [(ngModel)]="model.review"></textarea>
+                </div>
+                <button type="submit" class="btn btn-info" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  Submit</button>&nbsp;
+                  <button type="reset" class="btn btn-secondary" ><i class="fa fa-retweet" aria-hidden="true"></i>
+                    Reset</button>
+              </form>
+          </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal" id="photoModal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4><i class="fa fa-camera" aria-hidden="true"></i>&nbsp;&nbsp;Post your photos</h4>
+            <button type="button" id="postclose" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form role="form" id="postForm" (ngSubmit)="onSubmit(submitSuccess)">
+              <div class="form-group" align="center">
+                  <div id="retry">
+                    <a href="javascript:void(0);" (click)="resetPhoto()"><span>Drag and drop or upload another photo</span></a>
+                  </div>
+                  <div id="drop_zone">
+                      <div id="preview_box">
+                      </div>
+                      <div id="drop_box">
+                          <div id="h" style="margin-top:7%">
+                              <input id="img_input" type="file" accept="image/*" (change)="onFileChange($event)"/>
+							                <label for="img_input" id="img_label">Choose photo</label>
+                              <p>or</p>
+                              <h6>Drag and drop a file from your desktop</h6>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <output id="list"></output> 
+    
+              </div>
+              <div class="form-group">
+                  <div *ngIf="message" [ngClass]="{ 'alert': message, 'alert-danger': message.type === 'error' }">
+                    {{message.text}}</div>
+                  <label for="title">Title of your review</label>
+                  <input type="text" class="form-control" name="title" id="title" placeholder="Enter the title"
+                  [(ngModel)]="model.title" />
+                </div>
+                <div class="form-group">
+                  <label for="review">Add a location tag (required)</label>
+                  <input type="text" class="form-control"  name="postLocation" placeholder="Search a city"
+                  (keydown)="showPlaceList()" autocomplete="off" [(ngModel)]="model.postLocation"/>
+                  <div id="placeList2" class="placeList" (mouseleave)="hidePlaceList()">
+                    <div *ngFor="let city of cities | filter:searchText">
+                      <a href="javascript:void(0);" (click)="finshLocation(city.name)">
+                        <p>&nbsp;<i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;{{city.name}}</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="review">Your Review</label>
+                  <textarea cols="93" rows="6" class="form-control" name="review" id="review" placeholder="Anything about your trip..."
+                  [(ngModel)]="model.review"></textarea>
+                </div>
+                
+
+                <button type="submit" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                  Submit</button>&nbsp;
+                  <button type="reset" class="btn btn-secondary" ><i class="fa fa-retweet" aria-hidden="true"></i>
+                    Reset</button>
+              </form>
+          </div>
+    </div>
+  </div>
+</div>
+

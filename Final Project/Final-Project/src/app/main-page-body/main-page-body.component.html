@@ -1,0 +1,357 @@
+<app-header></app-header>
+
+<div data-spy="scroll" data-target=".nav" data-offset="50" style="position:relative;">
+<!-- 
+ <div class="jumbotron" style="margin-bottom:0px; margin-top:30px">
+  <div class="container text-center">
+      <h1>The Best Trip</h1>
+      <p>Your unforgetable experiences are the best feedback for us</p>
+  </div>
+</div> -->
+
+<!-- The Image Dispal -- Carousle -->
+<div id="demo" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../../assets/image/Snow&Mountain.jpg" alt="Los Angeles" width="100%" height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/image/Tower with Dawn.jpg" alt="Chicago" width="100%" height="auto">
+    </div>
+    <div class="carousel-item">
+      <img src="../../assets/image/lake&star.jpg" alt="New York" width="100%" height="auto">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+  <div class="jumbotron text-center" id="search-bar" style="margin-bottom:0px;">
+    <h1>Find Your Next Destination</h1>
+    <div class="container">
+      <div class="input-group">
+        <input class="form-control" type="text" id="search" name="search" (keydown)="showPlaceList()"
+          [(ngModel)]="searchText" autocomplete="off" placeholder="Find a city you like">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-info" (click)="search()">Search</button>
+        </div>
+      </div>
+      <div id="placeList" (mouseleave)="hidePlaceList()">
+        <div *ngFor="let city of cities | filter:searchText">
+          <a [href]="city.name">
+            <p>{{city.name}}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- the body part under the carousel -->
+  <div class="row" style="margin:0px; border: 50px solid rgb(242, 242, 242)">
+    <div class="col-sm-4" style="background-color:rgb(255, 255, 255); border-right: 20px solid rgb(242, 242, 242)" >
+      <!-- <h2>About Me</h2>
+      <h5>Photo of me:</h5>
+      <div class="fakeimg">Fake Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p> -->
+      <h3 style="padding-top:20px">Quick Navigation</h3>
+      <p>pick up the useful information you need</p>
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item" id="item1">
+          <a href="http://localhost:4200/mainPage#part1" class="nav-link" data-offset="50"><i class="fa fa-link" aria-hidden="true" id="link1"></i> Expert Recommend</a>
+        </li>
+        <li class="nav-item" id="item1">
+          <a href="http://localhost:4200/mainPage#part4" class="nav-link" data-offset="50"><i class="fa fa-link" aria-hidden="true" id="link1"></i> Previous Recommend</a>
+        </li>
+        <li class="nav-item" id="item2">
+          <a class="nav-link" href="http://localhost:4200/mainPage#part2"><i class="fa fa-link" aria-hidden="true" id="link2"></i> Latest Events</a>
+        </li>
+        <li class="nav-item" id="item3">
+          <a class="nav-link" href="http://localhost:4200/mainPage#part3"><i class="fa fa-link" aria-hidden="true" id="link3"></i> What Is BestTrip</a>
+        </li>
+      </ul>
+
+      <div class="leftImg">
+
+        <div class="leftImg">
+        <img class="top-image" src="../../assets/image/expert1.jpeg" style="width: 95%; border-radius: 15px">
+          <div class="leftImgCap">
+            <p><i class="fa fa-flag-o" aria-hidden="true"></i> the prosperous city you may looking for</p>
+          </div>
+        </div>
+
+        <div class="leftImg">
+          <img class="top-image" src="../../assets/image/expert2.png" style="width: 95%; border-radius: 15px;">
+          <div class="leftImgCap">
+            <p><i class="fa fa-flag-o" aria-hidden="true"></i> Run away from the stressful life</p>
+          </div>
+        </div>
+        
+        
+        <div class="leftImg">
+          <img class="top-image" src="../../assets/image/expert3.jpeg"style="width: 95%; border-radius: 15px">
+          <div class="leftImgCap">
+            <p><i class="fa fa-flag-o" aria-hidden="true"></i> Feel the literary atmosphere in old city</p>
+          </div>
+        </div>
+      </div>
+      <hr class="d-sm-none">
+    </div>
+    
+    <div class="col-sm-8" id="rightPanel" style="background-color:rgb(255, 255, 255); " >
+      <h2 id="part1" style="padding-top:20px; ">OUR TRAVEL EXPERT SUGGESTION</h2>
+      <h5>Monthly Recommend in April, 2019</h5>
+      <div class="">
+        <div id="expert" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#expert" data-slide-to="0" class="active"></li>
+            <li data-target="#expert" data-slide-to="1"></li>
+            <li data-target="#expert" data-slide-to="2"></li>
+            <li data-target="#expert" data-slide-to="3"></li>
+            <li data-target="#expert" data-slide-to="4"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/image/yellowStone.jpg" alt="Los Angeles" width="1024" height="768">
+              <div class="carousel-caption">
+                  <h3>YellowStone National park</h3>
+                  <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/Yosemite.jpg" alt="Chicago"  width="1024" height="768">
+              <div class="carousel-caption">
+                  <h3>Yosemite National Park</h3>
+                  <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/GlacierNationalPark.jpg" alt="New York" width="1024" height="768">
+              <div class="carousel-caption">
+                  <h3>Glacier National Park</h3>
+                  <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/image/Grand Canyon.jpg" alt="New York" width="1024" height="768">
+                <div class="carousel-caption">
+                    <h3>Grand Canyon National Park</h3>
+                    <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="../../assets/image/zion.jpg" alt="New York" width="1024" height="768">
+                <div class="carousel-caption">
+                    <h3>Zion National Park</h3>
+                    <p>We had such a great time in LA!</p>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;"><strong>The National Parks in United States</strong></p>
+      <p id="p1">In this month, our travel experts bring new story for us, this time they will introduce top 10 greatest
+        national parks in the United States </p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;You've likely heard it before, and it is true: the 59 official national parks of the United States are "our
+        greatest idea" and "our greatest treasure". The United States really can boast the premier national park system
+        in the entire world. Each of our 59 official national parks is easily worthy of your time, awe, and respect.
+        Once you visit some of these beloved national parks, you'll likely find yourself wanting to visit many more (if
+        not all) of them. <a data-toggle="collapse" data-target="#demo" style="color: rgb(77, 160, 179);">See more</a> </p>
+      <div id="demo" class="collapse">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;he chart constructed below represents an opinionated guide that highlights each of the 59 official
+        national parks of the United States. It does not include other national lands, such as national monuments,
+        national historical parks, national forests, national recreation areas, etc.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;Below the chart are many lists of national park superlatives. These lists can help you find the best
+        national parks based on the type of attractions and outdoor activities you'll find in the park.</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;In addition to the information we have presented below, we highly recommend that you purchase the
+        absolute two best guidebooks on the market that cover the US national parks, which are: Your Guide to the
+        National Parks & National Geographic Guide to National Parks of the United States.</p>
+      </div>
+      
+      <h2 id="part4" style="padding-top:20px; ">PREVIOUS RECOMMENDATION</h2>
+      <h5>Never miss the good story</h5>
+        <div id="prevDiv">
+          <img src="../../assets/image/prev1.png" style="width:400px;">
+          <img src="../../assets/image/prev2.jpg" style="width:400px">
+          <img src="../../assets/image/prev4.jpg" style="width:400px">
+          <img src="../../assets/image/prev3.png" style="width:400px">
+        </div>
+      <h2 id="part2" style="padding-top:36px; ">LATEST EVENTS</h2>
+      <h5>Fellow us and know the newest events</h5>
+      <div class="events">
+        <div id="events" class="carousel slide" data-ride="carousel" style="margin-right:3px; width: 49%; display: inline-block">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#events" data-slide-to="0" class="active"></li>
+            <li data-target="#events" data-slide-to="1"></li>
+            <li data-target="#events" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/image/ad1.jpg" alt="ad1" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/ad2.jpg" alt="ad2" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/ad3.jpg" alt="ad3" width="1100" height="500">
+            </div>
+          </div>
+        </div>
+        <div id="events2" class="carousel slide" data-ride="carousel" style="margin-left:3px; width: 49%; display: inline-block">
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#events" data-slide-to="0" class="active"></li>
+            <li data-target="#events" data-slide-to="1"></li>
+            <li data-target="#events" data-slide-to="2"></li>
+          </ul>
+
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../../assets/image/ad6.jpg" alt="ad4" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/ad5.jpeg" alt="ad5" width="1100" height="500">
+            </div>
+            <div class="carousel-item">
+              <img src="../../assets/image/ad4.jpg" alt="ad6" width="1100" height="500">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center"><strong>Find a event you interested in</strong></p>
+      <p id="p2">This section you will be able to know the latest event we have.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;if you show interest in it, don't hesitate! just click the link to get more 
+        details. We are devote for provide best experience for our customer, or for someone who first come to the website. These links are some special activities 
+        like a disconnt of flight, a disconnt of hotel that our partern have, or you can join us now to get some special offer.
+      </p>
+      <a data-toggle="collapse" data-target="#demo" style="color: rgb(77, 160, 179);"><strong>See more</strong></a>
+      <div id="demo" class="collapse">
+    </div>
+  <br><br> 
+
+  </div>
+</div>
+
+
+<!-- back fixed image -->
+
+<div id="imageWapper">
+  <img id="imageMedia" src="../../assets/image/imageMedia.jpg">
+  </div>
+<div style="height: 500px; background-color: rgba(0,0,0,0.5); ">
+  <div id="imageText">
+  <div><h2 style="text-shadow: black"><strong>Want to know more?</strong></h2></div>
+  <div><h1 style="text-shadow: 0px 20px 20px 0 black;">Join Us now!</h1></div>
+  <button style="text-shadow: 0px 20px 20px 0 black;" class="btn-lg btn-info my-2 my-sm-0" type="button" data-toggle="modal" data-target="#modalSignUp">JOIN!</button>
+  </div>
+</div>
+
+<div class="toast" data-autohide="false" id="toast1" style="z-index:10">
+  <div class="toast-header">
+    <strong class="mr-auto text-info">New Events</strong>
+    <small class="text-muted">2 days ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body">
+    Some text inside the toast body
+  </div>
+</div>
+<div class="toast" data-autohide="false" id="toast2" style="z-index:10; margin-bottom: 5px">
+  <div class="toast-header">
+   <strong class="mr-auto text-info"><a href="des-rio" style="color: rgb(77, 160, 179);">Welcome to Rio</a></strong>
+    <small class="text-muted">5 days ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body" style="z-index:10">
+    Some text inside the toast body
+  </div>
+</div>
+<div class="toast" data-autohide="false" id="toast3" style="z-index:10">
+  <div class="toast-header">
+    <strong class="mr-auto text-info">Toast Header</strong>
+    <small class="text-muted">5 mins ago</small>
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+  </div>
+  <div class="toast-body">
+    Some text inside the toast body
+  </div>
+</div>
+
+<!-- the intrduce of functions -->
+<div id="services" class="container-fluid text-center" style="background-color: white; border: 50px solid rgb(242, 242, 242)">
+  <h2 id="part3" style="padding-top:30px;">This is BestTrip</h2>
+  <h4>We help you make the decision wisely</h4>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fa fa-plane fa-4x" aria-hidden="true"></i>
+      <h4>FLIGHT</h4>
+      <p>We own the cheappest flight</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-globe fa-4x" aria-hidden="true"></i>
+      <h4>GLOBE</h4>
+      <p>You will always find what you want</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-bed fa-4x" aria-hidden="true"></i>
+      <h4>HOTEL</h4>
+      <p>Help you find comfort hotel</p>
+    </div>
+  </div>
+  <br><br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <i class="fa fa-map-marker fa-4x" aria-hidden="true"></i>
+      <h4>LANDMARK</h4>
+      <p>Never miss any famous landmark</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-ship fa-4x" aria-hidden="true"></i>
+      <h4>CRUISE</h4>
+      <p>Want to change another way travel?</p>
+    </div>
+    <div class="col-sm-4">
+      <i class="fa fa-search fa-4x" aria-hidden="true"></i>
+      <h4 style="color:#303030;">SEARCH</h4>
+      <p>Search for a palce you never been</p>
+    </div>
+  </div>
+</div>
+<!-- the introduction of our company -->
+
+<div id="Company" class="text-center" style="background-color:rgb(242, 242, 242); margin:0">
+  <div class="container">
+  <h3>About Best Trip</h3>
+  <p><em>We all love travel!</em></p>
+  <p style="margin:0;padding-bottom:30px;">We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+    We the most intellgence, most wonderful, most friendly travel plantform your have ever seen.
+  </p>
+  </div>
+</div>
+

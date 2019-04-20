@@ -1,0 +1,23 @@
+.jumbotron {
+    background-image: url("../../assets/image/robert-lukeman-150146-unsplash.jpg");/* Photo by Robert Lukeman on Unsplash */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav-pills .nav-item .nav-link{
+    color: rgb(36, 162, 182);
+}
+.nav-pills .nav-item .active {
+    color: white;
+    background-color: rgb(36, 162, 182);
+}
+.form-inline .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+.col-lg-2 {
+    padding: 0;
+}
+.dropright:hover .dropdown-menu {
+    display: block;
+}
+

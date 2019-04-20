@@ -1,0 +1,78 @@
+    <!-- The Navgation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-custom" style="height:70px">
+      <a class="navbar-brand" href="#"><i class="fa fa-ravelry" aria-hidden="true"></i> BestTrip</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/destination">  Destination</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/inspiration"> Tour Inspiration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/flight"> Flight</a>
+          </li>
+          <!--<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Topic 4</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#section41">Topic 4-1</a>
+            <a class="dropdown-item" href="#section42">Topic 4-2</a>
+          </div>
+        </li> -->
+        <!-- s -->
+        </ul>
+      
+      <form class="form-inline my-2 my-lg-0">
+        <div class="avatar-div" style="min-width:55px;min-height:55px;margin-right:10px" *ngIf="this.userObject;else login"> 
+            <ng-template #popTemplate >
+              <div class="container-fluid" style="width:200px;padding:0">
+                <h5 class="">Hi!&nbsp;{{this.currentNickName}}</h5>
+                <hr>
+                <a href="/profile"><p>View profile</p></a>
+                <a href=""><p>Account info</p></a>
+                <a href="javascript:void(0);" (click)="logout(wanttologout)"><p>Sign out</p></a>
+              </div>
+            </ng-template>
+            <a href="/homePage" [popover]="popTemplate" placement="bottom" style="margin-right:20px;padding-bottom:20px" triggers="mouseenter" [outsideClick]="true">
+              <div class="mysquare" style="width:100%;padding-top:100%;">
+                <div class="avatar_box border">
+                  <img id="" class=" " src={{avatar}} alt="preview"/>
+                </div>
+              </div>
+            </a>
+        </div>
+
+        <ng-template #login>
+          <button class="btn btn-outline-info my-2 my-sm-0" type="button" data-toggle="modal" data-target="#LoginModal">Login</button>&nbsp;
+          <button class="btn btn-outline-info my-2 my-sm-0" type="button" data-toggle="modal" data-target="#modalSignUp">SignUp</button>
+        </ng-template>
+      </form>
+      </div>
+      <!-- <ul class="nav">
+        <li id="btnLogin"><button type="button" id="btnLogin" class="btn btn-light" data-toggle="modal" data-target="#LoginModal"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button></li>
+      </ul>  -->
+    </nav>
+    <div style="height:60px">
+
+    </div>
+ 
+    <ng-template #wanttologout let-c="close" let-d="dismiss">
+        <div class = "modal-content">
+          <div class="modal-body">
+            Do you want to logout?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-info" (click)="c('yes')">Yes</button>
+            <button type="button" class="btn btn-info" (click)="c('no')">No</button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template #popReport >
+        <div align="center" style="height: 20px">
+          <a href="javascript:void(0);" class="" style=""><p class="text-info">Report this</p></a>
+        </div>
+      </ng-template>

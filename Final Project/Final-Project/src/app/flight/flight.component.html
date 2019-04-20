@@ -1,0 +1,218 @@
+<app-header></app-header>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Best Flights</h1>
+            <br />
+            <ul class="nav nav-pills" role="tablist" id="trip-type">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="pill" href="#roundtrip">Roundtrip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#oneway">One-Way</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="pill" href="#multicity">Multi-City</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div id="roundtrip" class="container tab-pane active"><br>
+                <form class="form-inline">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="From Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="To Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Depart Date" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Return Date" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="number" class="form-control w-100 mb-2 mr-sm-2" placeholder="Number of Person" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <select class="form-control w-100 mb-2 mr-sm-2">
+                                <option>Economy</option>
+                                <option>Premium Economy</option>
+                                <option>Business Class</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6"><br />
+                        <button type="submit" class="btn btn-info w-100 mb-2">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div id="oneway" class="container tab-pane"><br>
+                <form class="form-inline">
+                    <div class="row w-100">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="From Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="To Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Depart Date" required>
+                        </div>
+                        <!-- <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Return Date" required>
+                        </div> -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="number" class="form-control w-100 mb-2 mr-sm-2" placeholder="Number of Person" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <select class="form-control w-100 mb-2 mr-sm-2">
+                                <option>Economy</option>
+                                <option>Premium Economy</option>
+                                <option>Business Class</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6"><br />
+                        <button type="submit" class="btn btn-info w-100 mb-2">Search</button>
+                    </div>
+                </form>
+            </div>
+            <div id="multicity" class="container  tab-pane"><br>
+                <form class="form-inline">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="From Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="To Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Depart Date" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="From Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="text" class="form-control w-100 mb-2 mr-sm-2" placeholder="To Where" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Depart Date" required>
+                        </div>
+                        <!-- <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="date" class="form-control w-100 mb-2 mr-sm-2" placeholder="Return Date" required>
+                        </div> -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <input type="number" class="form-control w-100 mb-2 mr-sm-2" placeholder="Number of Person" required>
+                        </div>
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <select class="form-control w-100 mb-2 mr-sm-2">
+                                <option>Economy</option>
+                                <option>Premium Economy</option>
+                                <option>Business Class</option>
+                                <option>First Class</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6"><br />
+                        <button type="submit" class="btn btn-info w-100 mb-2">Search</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <h2 class="text-center">Best Roundtrip Deals Selected for YOU!</h2><br />
+        <div class="dropdown">
+            <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+              from Boston
+            </button>
+            <div class="dropdown-menu">
+                <div class="dropdown dropright">
+                    <button class="btn-info dropdown-item dropdown-toggle">Massachusetts</button>
+                    <div class="dropdown-menu">
+                        <a class="btn-info dropdown-item" href="#">Boston</a>
+                        <a class="btn-info dropdown-item" href="#">Nantucket</a>
+                    </div>
+                </div>
+                <div class="dropdown dropright">
+                    <button class="btn-info dropdown-item dropdown-toggle">Texas</button>
+                    <div class="dropdown-menu">
+                        <a class="btn-info dropdown-item" href="#">Austin</a>
+                        <a class="btn-info dropdown-item" href="#">Dallas</a>
+                        <a class="btn-info dropdown-item" href="#">Houston</a>
+                    </div>
+                </div>
+            </div>
+        </div><br />
+        <div class="row card-columns">
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                        <div id="paypal-checkout-btn"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Atlanta</h4>
+                        <p class="card-text">Tue, 04/27/2019 - Thu, 04/30/2019</p>
+                        <a href="#" class="card-link stretched-link text-info"><h4>$120</h4></a>
+                        <img src="../../assets/image/AmericanAirlines.png" width="25px">American Airlines
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    

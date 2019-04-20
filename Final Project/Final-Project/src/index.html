@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Besttrip</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+  
+  <script>
+  $(document).ready(function(){
+    $('.toast').toast('show');
+  });
+
+  $('#loginForm').submit(function() {
+    $('#LoginModal').modal('hide'); //or  $('#IDModal').modal('hide');
+  });
+  </script> 
+
+</head>
+<body id="BestTrip" data-spy="scroll" data-target=".navbar" data-offset="50">
+  <app-root></app-root>
+</body>
+</html>

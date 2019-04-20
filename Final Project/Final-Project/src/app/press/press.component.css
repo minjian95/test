@@ -1,0 +1,12 @@
+#top{
+    background-image: url(../../assets/image/media-center-top.png);
+    background-size: 1230px 366px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.top-text{
+    color:white;
+}
+.news{
+    margin-bottom:40px;
+}

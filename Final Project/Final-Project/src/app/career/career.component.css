@@ -1,0 +1,54 @@
+#top{
+    background-image: url(../../assets/image/career-top.png);
+    background-size: 1230px 366px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.top-text{
+    color:white;
+}
+
+.img-header{
+    background-size: auto 168px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+.card{
+    margin-bottom:20px;
+    border:0;
+}
+.card:hover{
+    box-shadow: 1px 2px 3px grey;
+}
+.card:hover h6{
+    color:rgb(79, 161, 182)
+}
+a:hover{
+    text-decoration:none;
+}
+h6{
+    color:black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+   
+}
+.card-body p{
+    font-size:16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;    
+    
+}
+.hide-card{
+    display:none;
+}
+a p{
+    color:grey;
+}
+hr{
+    margin-top:0px;
+}
+
+   
